@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Top News</ion-title>
+  </ion-navbar>
+
+</ion-header>
+  
+<ion-content>
+
+  <ion-item *ngFor="let news  of article">
+  
+      <img src="{{news.urlToImage}}"/>
+      <ion-card-content>
+        <ion-card-title style="width: 100%;">
+            {{news.title}}
+        </ion-card-title>
+        
+      </ion-card-content>
+  </ion-item>
+         
+</ion-content>
