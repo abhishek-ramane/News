@@ -6,12 +6,19 @@
   </ion-navbar>
 
 </ion-header>
-  
-<ion-content>
 
-  <ion-item *ngFor="let news  of article" >
+
   
-      <img src="{{news.urlToImage}}"/>
+
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+  
+
+  <ion-item *ngFor="let news  of article" (click)='openDescription(news)'>
+  
+      <img src="{{article.urlToImage}}"/>
       <ion-card-content>
         <ion-card-title>
             {{news.title}}

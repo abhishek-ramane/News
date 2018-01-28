@@ -13,7 +13,7 @@ import { WelcomeSlidesPage } from '../pages/welcome-slides/welcome-slides';
 import { LearnPage } from '../pages/learn/learn';
 import { TabBootstrapPage } from '../pages/tab-bootstrap/tab-bootstrap';
 import { TabLinuxPage } from '../pages/tab-linux/tab-linux';
-
+import {DescriptionPage} from '../pages/description/description';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { TabLinuxPage } from '../pages/tab-linux/tab-linux';
     LearnPage,
     TabAngularPage,
     TabBootstrapPage,
-    TabLinuxPage
+    TabLinuxPage,
+    DescriptionPage
    ],
   imports: [
     BrowserModule,
@@ -39,7 +40,8 @@ import { TabLinuxPage } from '../pages/tab-linux/tab-linux';
     LearnPage,
     TabAngularPage,
     TabBootstrapPage,
-    TabLinuxPage
+    TabLinuxPage,
+    DescriptionPage
    ],
   providers: [
     StatusBar,
