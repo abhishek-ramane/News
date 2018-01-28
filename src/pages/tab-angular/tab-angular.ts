@@ -14,18 +14,8 @@ export class TabAngularPage {
 
   ResNews :any;
   article:any[]=[];
-  title:string='';
-  description:string='';
-  publishedAt:string='';
-  url:string='';
-  count:number=0;
-  img:string='';
-  source:string='';
-
-   a:number[]=[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private http:Http) {
- //   console.log("Into Angular="+this.topNews.isWorking());
    }
 
   ionViewDidLoad() {
@@ -39,13 +29,10 @@ export class TabAngularPage {
     .subscribe(
       (res:Response)=>{
         this.ResNews=res.json();
-      //  console.log(News);
         console.log(this.ResNews.articles);
         for (let i = 0; i < (this.ResNews.articles).length; i++) {
-          this.a.push(i);
           this.article.push(this.ResNews.articles[i]);
-         // console.log("Articles="+this.article[i]);          
-        }
+          }
         }
     );
   }
