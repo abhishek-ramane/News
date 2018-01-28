@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http ,Response } from '@angular/http'; 
-//import { TopNewsProvider } from '../../providers/top-news/top-news';
+
+
 
 @IonicPage()
 @Component({

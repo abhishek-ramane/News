@@ -13,7 +13,8 @@ import { WelcomeSlidesPage } from '../pages/welcome-slides/welcome-slides';
 import { LearnPage } from '../pages/learn/learn';
 import { TabBootstrapPage } from '../pages/tab-bootstrap/tab-bootstrap';
 import { TabLinuxPage } from '../pages/tab-linux/tab-linux';
-import { TopNewsProvider } from '../providers/top-news/top-news';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -43,8 +44,7 @@ import { TopNewsProvider } from '../providers/top-news/top-news';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    TopNewsProvider
-  ]
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    ]
 })
 export class AppModule {}
