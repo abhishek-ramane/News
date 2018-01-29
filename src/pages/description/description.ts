@@ -24,10 +24,10 @@ export class DescriptionPage {
 
   presentActionSheet() {
     let actionSheet = this.actionSheetCtrl.create({
-      title: 'Modify your album',
+      title: 'More Actions',
       buttons: [
         {
-          text: 'Close',
+          text: 'Go Back',
           role: 'close',
           handler: () => {
             this.closeModal();

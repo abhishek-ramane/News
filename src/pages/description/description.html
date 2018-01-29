@@ -1,23 +1,27 @@
 <ion-content>
     <img src="{{article.urlToImage}}" onerror="this.src='http://www.radiotimes.com/uploads/images/Original/89033.jpg'" />
     <ion-item>
-        <ion-card-content>
-            <h1>
-                {{article.title}}
-            </h1>
-            <h3>
-                {{article.description}}
-            </h3>
-            <br>
-            <p>
-                Time: {{article.publishedAt}}
-            </p>
-        </ion-card-content>
-
-
-
+        <h1>
+            {{article.title}}
+        </h1>
     </ion-item>
-    <button ion-button block (click)="presentActionSheet()">
-        More
-    </button>
+    <ion-item>
+            {{article.description}}
+    </ion-item>
+    <ion-item>
+        <p>
+
+            News Source: {{article.source.name}}
+            <br> Published At {{article.publishedAt}}
+        </p>
+      
+    </ion-item>
+    <ion-item>
+           <ion-label color="secondary"><a href="{{article.url}}">To Konw More</a></ion-label> 
+    </ion-item>
 </ion-content>
+<ion-footer>
+    <ion-toolbar>
+      <button ion-button full (click)="presentActionSheet()">Back</button>
+    </ion-toolbar>
+  </ion-footer>

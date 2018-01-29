@@ -8,23 +8,23 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { TabAngularPage } from '../pages/tab-angular/tab-angular';
-import { HomePage } from '../pages/home/home';
 import { WelcomeSlidesPage } from '../pages/welcome-slides/welcome-slides';
 import { LearnPage } from '../pages/learn/learn';
 import { TabBootstrapPage } from '../pages/tab-bootstrap/tab-bootstrap';
 import { TabLinuxPage } from '../pages/tab-linux/tab-linux';
 import {DescriptionPage} from '../pages/description/description';
+import {AboutMePage} from '../pages/about-me/about-me';
 
 @NgModule({
   declarations: [
     MyApp,
     WelcomeSlidesPage,
-    HomePage,
     LearnPage,
     TabAngularPage,
     TabBootstrapPage,
     TabLinuxPage,
-    DescriptionPage
+    DescriptionPage,
+    AboutMePage
    ],
   imports: [
     BrowserModule,
@@ -36,12 +36,12 @@ import {DescriptionPage} from '../pages/description/description';
   entryComponents: [
     MyApp,
     WelcomeSlidesPage,
-    HomePage,
     LearnPage,
     TabAngularPage,
     TabBootstrapPage,
     TabLinuxPage,
-    DescriptionPage
+    DescriptionPage,
+    AboutMePage
    ],
   providers: [
     StatusBar,

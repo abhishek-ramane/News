@@ -32,7 +32,7 @@ export class TabAngularPage {
   getTopNews() {
     return this.http.get('https://newsapi.org/v2/top-headlines?apiKey=c76b376a1e7346208f330eb65f8f30a2&country=in')
       .subscribe(
-      (res: Response) => {
+      (res: Response) => {  
         this.ResNews = res.json();
         console.log(this.ResNews.articles);
         for (let i = 0; i < (this.ResNews.articles).length; i++) {
@@ -63,6 +63,9 @@ export class TabAngularPage {
   refreshPage() {
     this.navCtrl.setRoot(this.navCtrl.getActive().component);
   }
+
+  
+
 
 
 }

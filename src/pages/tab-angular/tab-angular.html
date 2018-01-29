@@ -14,7 +14,7 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-
+<ng-container *ngIf="!ErrorMsg">
   <ion-item *ngFor="let news  of article" (click)='openDescription(news)'>
     <img src="{{news.urlToImage}}" onerror="this.src='http://www.radiotimes.com/uploads/images/Original/89033.jpg'" />
     <ion-card-content>
@@ -23,5 +23,7 @@
       </ion-card-title>
     </ion-card-content>
   </ion-item>
+</ng-container>
+
 
 </ion-content>
