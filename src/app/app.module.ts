@@ -13,7 +13,6 @@ import { LearnPage } from '../pages/learn/learn';
 import { TabBootstrapPage } from '../pages/tab-bootstrap/tab-bootstrap';
 import { TabLinuxPage } from '../pages/tab-linux/tab-linux';
 import {DescriptionPage} from '../pages/description/description';
-import {AboutMePage} from '../pages/about-me/about-me';
 
 @NgModule({
   declarations: [
@@ -23,8 +22,7 @@ import {AboutMePage} from '../pages/about-me/about-me';
     TabAngularPage,
     TabBootstrapPage,
     TabLinuxPage,
-    DescriptionPage,
-    AboutMePage
+    DescriptionPage
    ],
   imports: [
     BrowserModule,
@@ -40,8 +38,7 @@ import {AboutMePage} from '../pages/about-me/about-me';
     TabAngularPage,
     TabBootstrapPage,
     TabLinuxPage,
-    DescriptionPage,
-    AboutMePage
+    DescriptionPage
    ],
   providers: [
     StatusBar,

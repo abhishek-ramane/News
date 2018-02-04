@@ -4,7 +4,6 @@ import { IonicPage, NavController } from 'ionic-angular';
 import { TabAngularPage } from '../tab-angular/tab-angular';
 import { TabBootstrapPage } from '../tab-bootstrap/tab-bootstrap';
 import { TabLinuxPage } from '../tab-linux/tab-linux';
-import {AboutMePage} from '../about-me/about-me';
 
 @IonicPage()
 @Component({
@@ -19,5 +18,6 @@ export class LearnPage {
 
 
   constructor(public navCtrl: NavController) {}
+
 
 }

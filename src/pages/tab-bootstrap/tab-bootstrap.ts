@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the TabBootstrapPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Http, Response } from '@angular/http';
+import { ModalController } from 'ionic-angular/components/modal/modal-controller';
+import { DescriptionPage } from '../description/description';
 
 @IonicPage()
 @Component({
@@ -15,11 +11,61 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TabBootstrapPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  ResNews: any;
+  article: any[] = [];
+
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    private http: Http,
+    private modelCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TabBootstrapPage');
+    this.getTopNews();
   }
 
+
+
+  getTopNews() {
+    return this.http.get('https://newsapi.org/v2/top-headlines?apiKey=c76b376a1e7346208f330eb65f8f30a2&country=in&category=technology')
+      .subscribe(
+      (res: Response) => {  
+        this.ResNews = res.json();
+        console.log("Technology News");
+        console.log(this.ResNews.articles);
+        for (let i = 0; i < (this.ResNews.articles).length; i++) {
+          this.article.push(this.ResNews.articles[i]);
+        }
+      }
+      );
+  }
+
+  openDescription(i) {
+    console.log("clicking");
+    console.log("from articles=" + i.title);
+    this.modelCtrl.create(DescriptionPage, {
+      i: i
+    }).present();
+  }
+
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      refresher.complete();
+      this.refreshPage();
+    }, 2000);
+
+  }
+
+  refreshPage() {
+    this.navCtrl.setRoot(this.navCtrl.getActive().component);
+  }
+
+  
+
+
+
 }
+
+
